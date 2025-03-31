@@ -1,0 +1,59 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model List<FirstTaskMVC.Models.MovieViewModel>
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <div class="container p-4">
+        <div class="row pt-4">
+            <div class="col-4">
+                <img alt="The Godfather" src="/Images/Movie-Godfather.png" />
+            </div>
+            <div class="col-4">
+                <img alt="The Usual Suspects" src="/Images/Movie-UsualSuspect.png" />
+            </div>
+            <div class="col-4">
+                <img alt="Pulp Fiction" src="/Images/Movie-PulpFiction.png" />
+            </div>
+        </div>
+        <div class="row pt-4">
+            <div class="col-4">
+                The aging patriarch of an organized crime dynasty in postwar New York City transfers control of his clandestine empire to his reluctant youngest son.
+            </div>
+            <div class="col-4">
+                A sole survivor tells of the twisty events leading up to a horrific gun battle on a boat, which began when five criminals met at a seemingly random police lineup.
+            </div>
+            <div class="col-4">
+                The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <p> <img alt="IMDb" src="/Images/Movie-IMDb.png" />
+    <p>Learn about <a href="https://www.imdb.com/" target="_blank">movies</a></p>
+</div>
+
+<h1>Movies</h1>
+<p>This is the index page of the Movie Controller.</p>
+
+<ul>
+    @foreach(var movie in Model)
+    {
+        <li>
+            Title: @movie.MovieTitle
+            Director: @movie.Director
+            (@movie.Year)
+        </li>
+    }
+</ul>
+
+@*
+<h4>Here is a great movie from @Model.Year</h4>
+<h4>It was directed by @Model.Director</h4>
+<h4>Name of the movie is: @Model.MovieTitle</h4>
+*@

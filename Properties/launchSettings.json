@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "http": {
+    "FirstTaskMVC": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
